@@ -1,0 +1,22 @@
+WWW:
+1. www stands for world wide web.
+2. It basically defines all the websites or pages that can be accessed by people using their local machine that are in the 
+Internet.
+
+Examples for web server: nginx, Apache HTTP server, Oracle iPlanet, AOL server
+Example for web browsers: Google Chrome, Brave, Safari, Microsoft Edge, Firefox
+
+
+difference between URL and domain:
+
+1.  URL: Web address for a particaular website.
+    Domain: Name to easily access web pages.
+
+2.  URL: mandatorily it should contain http or https in the beginning.
+    Domain: http or https is not mandatory.
+
+3.  URL: It contains the following parts− method, protocol, host name, port, and file path.
+    Domain: It consists of three parts− Top level domain, Intermediate level, and Low level.
+
+    
+

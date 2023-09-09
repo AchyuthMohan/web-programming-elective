@@ -1,0 +1,5 @@
+ARPANET:
+1. It stands for Advanced Research Project Agency Network.
+2. It is the first ever computer network developed.
+3. The first permanent ARPANET link was established on 21 November 1969, between the IMP at UCLA and the IMP at the Stanford Research Institute.
+4. It uses packet-switching technique to transmit data. Packet-switching means that bits of information can take virtually any route and still end up at its final destination.

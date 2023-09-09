@@ -1,0 +1,4 @@
+Packet Switching:
+1. Packet-switching means that bits of information can take virtually any route and still end up at its final destination.
+2. Packet switching is most commonly seen on data networks, including LANs, WANs and the Internet. 
+3. It is well suited to data transmission, as it allows networks to adapt to changing conditions quickly. For example, if one of the network's routers fails, packets can be automatically re-routed to avoid that device.
