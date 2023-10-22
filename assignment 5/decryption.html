@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter the encrypted code: </p>
+    <input id="encrypted" type="Encrypted">
+    <button id="buttonClick">Click</button>
+    <p id="message"></p>
+    <script>
+        var encrypted=document.getElementById("encrypted");
+        var buttonClick=document.getElementById("buttonClick");
+        var resultMessage=document.getElementById("message");
+        function handleClick(){
+            encrypted=encrypted.value;
+            var result=caesarCipherDecrypt(encrypted,3);
+            resultMessage.innerHTML=result;
+        }
+        function caesarCipherDecrypt(cipherText, shift) {
+            if (shift < 0) {
+              shift = (shift % 26) + 26;
+            }
+          
+            let decryptedString = '';
+          
+            for (let i = 0; i < cipherText.length; i++) {
+              const char = cipherText[i];
+          
+              if (char.match(/[a-z]/i)) {
+                const isUpperCase = char === char.toUpperCase();
+                const code = cipherText.charCodeAt(i);
+          
+                let shiftedCode = code - shift;
+          
+                if (isUpperCase) {
+                  if (shiftedCode < 65) {
+                    shiftedCode += 26;
+                  }
+                } else {
+                  if (shiftedCode < 97) {
+                    shiftedCode += 26;
+                  }
+                }
+          
+                decryptedString += String.fromCharCode(shiftedCode);
+              } else {
+                decryptedString += char;
+              }
+            }
+          
+            return decryptedString;
+          }
+
+          buttonClick.addEventListener("click",handleClick);
+          
+    </script>
+</body>
+</html>

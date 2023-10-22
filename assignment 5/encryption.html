@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="Enter the KTU-ID" id="ktuId">
+    <button type="submit" id="buttonClick">Click</button>
+    <p id="encrypted"></p>
+    <script>
+        var ktuId = document.getElementById("ktuId");
+        var buttonClick = document.getElementById("buttonClick");
+        var encrypted = document.getElementById("encrypted");
+        function display() {
+            ktuId=ktuId.value
+            var encryptedId=caesarCipherEncrypt(ktuId,3);
+            encrypted.innerHTML=encryptedId;
+            
+        }
+        function caesarCipherEncrypt(inputString, shift) {
+            if (shift < 0) {
+              shift = (shift % 26) + 26;
+            }
+          
+            let encryptedString = '';
+          
+            for (let i = 0; i < inputString.length; i++) {
+              const char = inputString[i];
+          
+              if (char.match(/[a-z]/i)) {
+                const isUpperCase = char === char.toUpperCase();
+                const code = inputString.charCodeAt(i);
+          
+                let shiftedCode = code + shift;
+          
+                if (isUpperCase) {
+                  if (shiftedCode > 90) {
+                    shiftedCode -= 26;
+                  }
+                } else {
+                  if (shiftedCode > 122) {
+                    shiftedCode -= 26;
+                  }
+                }
+          
+                encryptedString += String.fromCharCode(shiftedCode);
+              } else {
+                encryptedString += char;
+              }
+            }
+            return encryptedString;
+          }
+        buttonClick.addEventListener("click", display);
+    </script>
+</body>
+
+</html>

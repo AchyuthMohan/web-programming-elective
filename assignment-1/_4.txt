@@ -1,0 +1,10 @@
+MIME:
+1.  MIME stands for Multipurpose Internet Mail Extension.
+2.  It is a standard that was proposed by Bell Communications in 1991 in order to expand the limited capabilities of email. 
+3.  Examples for MIME types: text/html,text/plain,application/pdf,image/jpeg,image/png,image/gif
+4.  Reason why MIME type specification is necessary:
+    a.  Content Interpretation: It specifies the type of data or comtent send between the server and browser.
+        This information is crucial because it allows the browser to interpret and display the content correctly.
+    b.  Security: MIME types help ensure security by preventing browsers from executing or displaying potentially harmful content in unintended ways.
+    c.  Data Validation: MIME types help ensure data validation and integrity. The browser can verify that the received data matches the expected MIME type, preventing issues where, for example, a user uploads a malicious file with an incorrect MIME type.
+

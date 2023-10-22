@@ -1,0 +1,13 @@
+1.  URL stands for Uniform Resource Locator.
+2. It is an address that can be used to find a page in internet when entered in a browser.
+3. The syntax of URL is:
+    scheme://host:port/path?query
+
+    scheme- whether its http or https 
+    host- The host specifies the domain name or IP address of the server where the resource is located.
+    Port (optional): The port number specifies the specific port on the host where the resource can be accessed.
+    Path: The path specifies the location of the resource on the server's file system or within the web application.
+    Query (optional): The query component is used to send parameters or data to the resource. It starts with a question mark (?) and can contain key-value pairs (e.g., ?param1=value1&param2=value2).
+    Fragment (optional): The fragment component is used to specify a specific section or identifier within the resource.
+
+    Ex: https://achyuthmohan.tech/
