@@ -1,0 +1,21 @@
+body{
+    margin: 3%;
+    /* background-image: url('https://avatars.githubusercontent.com/u/132728894?s=200&v=4'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a:hover{
+    background-color: green;
+}
+a:active{
+    background-color: green;
+}
+ul,li{
+    list-style:square;
+}
+table{
+    border-left: 2px dashed green;
+    border-right: 2px dashed green;
+    border-top: 2px double green;
+    border-bottom: 2px double green;
+}

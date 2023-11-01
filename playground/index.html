@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td rowspan="3">Food Item</td>
+            <td colspan="4">Recomended intake</td>
+        </tr>
+        <tr>
+            <td colspan="2">age &lt 15</td>
+            <td colspan="2">age &gt 15</td>
+        </tr>
+        <tr>
+            <td>gm</td>
+            <td>Kcal</td>
+            <td>gm</td>
+            <td>Kcal</td>
+        </tr>
+        <tr>
+            <td>Cereals</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td>750</td>
+            <td>650</td>
+        </tr>
+        <tr>
+            <td>Cereals</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td>750</td>
+            <td>650</td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Symbol</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reg</td>
+                <td>&reg;</td>
+            </tr>
+            <tr>
+                <td>TM</td>
+                <td>&trade;</td>
+            </tr>
+            <tr>
+                <td>Copyright</td>
+                <td>&copy;</td>
+            </tr>
+            <tr>
+                <td>less than</td>
+                <td>&lt;</td>
+            </tr>
+            <tr>
+                <td>greater than</td>
+                <td>&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <form>
+        <label for="male">Male</label>
+        <input type="radio"name="gender"id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other">
+
+
+        <!--checkboxes  -->
+        <label for="pineapple">pineapple</label>
+        <input type="checkbox"name="fruits"value="pineapple">
+        <label for="watermelon">watermellon</label>
+        <input type="checkbox"name="fruits"value="watermellon">
+        <label for="apple">Apple</label>
+        <input type="checkbox"name="fruits"value="apple">
+        <button id="buttonClick">Click</button>
+    </form>
+    <script>
+        var buttonClick=document.getElementById("buttonClick");
+        var radioItems=document.getElementsByName("gender");
+        var checkBoxItems=document.getElementsByName("fruits");
+        var selectedFruits=[];
+        var selectedRadio=null;
+        function display(e){
+            e.preventDefault();
+            for(const radio of radioItems){
+                if(radio.checked){
+                    selectedRadio=radio.value;
+                    break;
+                }
+            }
+            for(const fruit of checkBoxItems){
+                if(fruit.checked){
+                    selectedFruits.push(fruit.value);
+                }
+            }
+            console.log("Selected: ",selectedRadio)
+            console.log("selected fruits: ",selectedFruits);
+        }
+        buttonClick.addEventListener("click",display)
+    </script>
+</body>
+</html>
