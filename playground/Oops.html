@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function student(name, age, mark) {
+            this.name = name;
+            this.age = age;
+            this.mark = mark;
+        }
+        var name = prompt("Enter the name: ")
+        var age = prompt("Enter the age: ");
+        var mark = prompt('Enter the marks: ');
+
+        var s = new student(name, age, mark);
+        document.writeln(`Name: ${s.name}`);
+        document.writeln(`Age: ${s.age}`);
+        document.writeln(`Mark: ${s.mark}`)
+    </script>
+</body>
+
+</html>

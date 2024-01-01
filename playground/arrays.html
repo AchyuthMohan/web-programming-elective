@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fruits:</h1>
+    <label for="pineapple">pineapple</label>
+    <input type="checkbox" name="fruits" id="" value="pineapple">
+    <label for="mussambi">mussambi</label>
+    <input type="checkbox" name="fruits" id="" value="mussambi">
+    <label for="grapes">grapes</label>
+    <input type="checkbox" name="fruits" id="" value="grapes">
+    <label for="apple">apple</label>
+    <input type="checkbox" name="fruits" id="" value="apple">
+    <button id="submitBtn">Submit</button>
+    <script>
+        var selectedFruits = [];
+        var fruits = document.getElementsByName("fruits");
+        var submitBtn = document.getElementById("submitBtn");
+        function display(e) {
+            e.preventDefault();
+            for (const fruit of fruits) {
+                if (fruit.checked) {
+                    selectedFruits.push(fruit.value);
+                }
+            }
+            console.log(selectedFruits);
+            for(i=0;i<selectedFruits.length;i++){
+                document.writeln(selectedFruits[i]);
+            }
+        }
+        submitBtn.addEventListener("click", display);
+    </script>
+</body>
+
+</html>

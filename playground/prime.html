@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="numInput">
+    <button id="showBtn">Click</button>
+    <p id="result"></p>
+    <script>
+        var numInput = document.getElementById("numInput");
+        var showBtn = document.getElementById("showBtn");
+        var result = document.getElementById("result");
+
+        function isPrime() {
+            var num = numInput.value;
+            if (num <= 1) {
+                result.innerHTML = "Non Prime";
+                return;
+            }
+            else if (num == 2) {
+                result.innerHTML = "Prime";
+                return;
+            }
+            else {
+                for (i = 2; i < num / 2; i++) {
+                    if (num % i == 0) {
+                        result.innerHTML = "Non Prime";
+                        return;
+                    }
+                }
+            }
+            result.innerHTML = "Prime";
+            return ;
+        }
+        showBtn.addEventListener("click", isPrime);
+    </script>
+</body>
+
+</html>

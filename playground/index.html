@@ -1,95 +1,29 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <table border="1">
-        <tr>
-            <td rowspan="3">Food Item</td>
-            <td colspan="4">Recomended intake</td>
-        </tr>
-        <tr>
-            <td colspan="2">age &lt 15</td>
-            <td colspan="2">age &gt 15</td>
-        </tr>
-        <tr>
-            <td>gm</td>
-            <td>Kcal</td>
-            <td>gm</td>
-            <td>Kcal</td>
-        </tr>
-        <tr>
-            <td>Cereals</td>
-            <td>1000</td>
-            <td>2000</td>
-            <td>750</td>
-            <td>650</td>
-        </tr>
-        <tr>
-            <td>Cereals</td>
-            <td>1000</td>
-            <td>2000</td>
-            <td>750</td>
-            <td>650</td>
-        </tr>
-    </table>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="index.js"></script>
 </head>
+
 <body>
-    <form>
-        <label for="male">Male</label>
-        <input type="radio"name="gender"id="male" value="male">
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female">
-        <label for="other">Other</label>
-        <input type="radio" name="gender" id="other" value="other">
+    <input type="number" name="" id="numberId">
+    <p id="result"></p>
+    <button id="submitBtn">click me</button>
 
-
-        <!--checkboxes  -->
-        <label for="pineapple">pineapple</label>
-        <input type="checkbox"name="fruits"value="pineapple">
-        <label for="watermelon">watermellon</label>
-        <input type="checkbox"name="fruits"value="watermellon">
-        <label for="apple">Apple</label>
-        <input type="checkbox"name="fruits"value="apple">
-        <button id="buttonClick">Click</button>
-    </form>
     <script>
-        var buttonClick=document.getElementById("buttonClick");
-        var radioItems=document.getElementsByName("gender");
-        var checkBoxItems=document.getElementsByName("fruits");
-        var selectedFruits=[];
-        var selectedRadio=null;
-        function display(e){
-            e.preventDefault();
-            for(const radio of radioItems){
-                if(radio.checked){
-                    selectedRadio=radio.value;
-                    break;
-                }
-            }
-            for(const fruit of checkBoxItems){
-                if(fruit.checked){
-                    selectedFruits.push(fruit.value);
-                }
-            }
-            console.log("Selected: ",selectedRadio)
-            console.log("selected fruits: ",selectedFruits);
+        var submitBtn = document.getElementById("submitBtn");
+        var numberId = document.getElementById("numberId");
+        var result = document.getElementById("result");
+        function showResult() {
+            var num = numberId.value;
+            var res = num * num;
+            result.innerHTML = `The result: ${res}`;
         }
-        buttonClick.addEventListener("click",display)
+        submitBtn.addEventListener("click", showResult);
     </script>
 </body>
+
 </html>
